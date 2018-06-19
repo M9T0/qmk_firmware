@@ -1,4 +1,5 @@
 #include QMK_KEYBOARD_H
+#include "keymap_jp.h"
 
 extern keymap_config_t keymap_config;
 
@@ -17,7 +18,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * ,------------------------------------------------.   ,------------------------------------------------.
    * | ESC  | Del  |   Q  |   W  |   E  |   R  |  T   |   |  Y   |   U  |   I  |   O  |   P  |   [  | Bksp |
    * |------+------+------+------+------+------+------|   |-------------+------+------+------+------+------|
-   * | Tab  | RCtrl|   A  |   S  |   D  |   F  |  G   |   |  H   |   J  |   K  |   L  |   ;  |   ]  | Enter|
+   * | Tab  | RCtrl|   A  |   S  |   D  |   F  |  G   |   |  H   |   J  |   K  |   L  |   :  |   ]  | Enter|
    * |------+------+------+------+------+------+------|   |------|------+------+------+------+------+------|
    * | SYMB | LSft |   Z  |   X  |   C  |   V  |  B   |   |  N   |   M  |   ,  |   .  |   /  |  UP  | RSft |
    * |------+------+------+------+------+------+------|   |------+------+------+------+------+------+------|
@@ -35,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * ,------------------------------------------------.   ,------------------------------------------------.
    * | Reset|   1  |   2  |   3  |   4  |   5  |  [   |   |  ]   |   6  |   7  |   8  |   9  |   0  | Bksp |
    * |------+------+------+------+------+------+------|   |-------------+------+------+------+------+------|
-   * | Del  |  F1  |      |Muhen | Henk |      |      |   | Left | Down |  Up  |Right |      |      | Enter|
+   * | Del  |  F1  |      |Muhen | Henk | PScr | INS  |   | Left | Down |  Up  |Right | PGDN | PGUP | Enter|
    * |------+------+------+------+------+------+------|   |------|------+------+------+------+------+------|
    * | SYMB |  F2  |  F3  |  F4  |  F5  |  F6  |  {   |   |  }   |  F7  |  F8  |  F9  | F10  | F11  | F12  |
    * |------+------+------+------+------+------+------|   |------+------+------+------+------+------+------|
@@ -44,26 +45,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    */
   [META] = LAYOUT( \
     RESET,   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_LBRC,    KC_RBRC,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______, \
-    _______, KC_F1,   XXXXXXX, KC_MHEN, KC_HENK, XXXXXXX, XXXXXXX,    KC_LEFT,    KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX, XXXXXXX, _______, \
+    _______, KC_F1,   XXXXXXX, KC_MHEN, KC_HENK, KC_PSCR, KC_INS,     KC_LEFT,    KC_DOWN, KC_UP,   KC_RGHT, KC_PGDN, KC_PGUP, _______, \
     _______, KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   S(KC_LBRC), S(KC_RBRC), KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12, \
     _______, _______, _______, _______, _______, _______, _______,    _______,    _______, _______, _______, XXXXXXX, XXXXXXX, XXXXXXX \
   ),
 
   /* SYMB
    * ,------------------------------------------------.   ,------------------------------------------------.
-   * | ESC  |   !  |   @  |   #  |   $  |   %  |  [   |   |  ]   |   ^  |   &  |   *  |   (  |   )  | Bksp |
+   * | ESC  |   !  |   @  |   #  |   $  |   %  |  [   |   |  ]   |   &  |   `  |      |      |      | Bksp |
    * |------+------+------+------+------+------+------|   |-------------+------+------+------+------+------|
    * | Del  |      |      |      |      |      |  (   |   |  )   |      |      |      |      |      | Enter|
    * |------+------+------+------+------+------+------|   |------|------+------+------+------+------+------|
-   * | SYMB |      |      |      |      |      |  {   |   |  }   |      |      |      |      |  UP  | Sft  |
+   * | SYMB |      |      |      |      |      |  {   |   |  }   |      |      |      |  _   |  UP  | Sft  |
    * |------+------+------+------+------+------+------|   |------+------+------+------+------+------+------|
    * | META | LCtrl|   `  |   \  | LAlt | LGUI |Space |   |Space |   '  |   -  |   =  | LEFT | DOWN | RIGHT|
    * `------------------------------------------------'   `------------------------------------------------'
    */
   [SYMB] = LAYOUT( \
-    _______, S(KC_1), S(KC_2), S(KC_3), S(KC_4), S(KC_5), KC_LBRC,    KC_RBRC,    S(KC_6), S(KC_7), S(KC_8), S(KC_9), S(KC_0), _______, \
-    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, S(KC_9),    S(KC_0),    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, \
-    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, S(KC_LBRC), S(KC_RBRC), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, \
+    _______, KC_EXLM, JP_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_LBRC,    KC_RBRC,    JP_AMPR, JP_CIRC, XXXXXXX, XXXXXXX, XXXXXXX, _______, \
+    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, JP_LPRN,    JP_RPRN,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, \
+    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, S(KC_LBRC), S(KC_RBRC), XXXXXXX, XXXXXXX, XXXXXXX, JP_UNDS, _______, _______, \
     _______, _______, _______, _______, _______, _______, _______,    _______,    _______, _______, _______, _______, _______, _______ \
   )
 
