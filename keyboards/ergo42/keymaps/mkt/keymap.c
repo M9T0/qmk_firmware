@@ -36,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    ,------------------------------------------------.   ,------------------------------------------------.
    | Reset|   1  |   2  |   3  |   4  |   5  |  [   |   |  ]   |   6  |   7  |   8  |   9  |   0  | Bksp |
    |------+------+------+------+------+------+------|   |-------------+------+------+------+------+------|
-   | Tab  |      |      |Muhen | Henk |      | INS  |   | Left | Down |  Up  |Right | PGDN | PGUP | Enter|
+   | Tab  |      |      |Muhen | Henk |      |      |   | Left | Down |  Up  |Right | PGDN | PGUP | Enter|
    |------+------+------+------+------+------+------|   |------|------+------+------+------+------+------|
    | SYMB |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |   |  F7  |  F8  |  F9  | F10  | F11  | F12  | RSft |
    |------+------+------+------+------+------+------|   |------+------+------+------+------+------+------|
@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    */
   [META] = LAYOUT( \
     RESET,   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_RBRC,    KC_BSLS, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______, \
-    _______, XXXXXXX, XXXXXXX, KC_MHEN, KC_HENK, XXXXXXX, KC_INS,     KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_PGDN, KC_PGUP, _______, \
+    _______, XXXXXXX, XXXXXXX, KC_MHEN, KC_HENK, XXXXXXX, XXXXXXX,    KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_PGDN, KC_PGUP, _______, \
     _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,      KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, \
     _______, _______, _______, _______, _______, _______, _______,    _______, _______, _______, _______, XXXXXXX, XXXXXXX, XXXXXXX  \
   ),
@@ -54,18 +54,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    ,------------------------------------------------.   ,------------------------------------------------.
    | ESC  |   !  |   "  |   #  |   $  |   %  |  [   |   |  ]   |   &  |   `  |      |  \   |  |   | Bksp |
    |------+------+------+------+------+------+------|   |-------------+------+------+------+------+------|
-   | Tab  |      |      |      |      |      |  (   |   |  )   |      |      |      |  +   |  *   | Enter|
+   | Tab  |      |      |      |      |      |      |   |      |   (  |   )  |      |  +   |  *   | Enter|
    |------+------+------+------+------+------+------|   |------|------+------+------+------+------+------|
-   | SYMB |      |      |      |      |      |  {   |   |  }   |      |      |      |  _   |  UP  | Sft  |
+   | SYMB |      |      |      |      |      |      |   |      |   {  |   }  |      |  _   |  UP  | Sft  |
    |------+------+------+------+------+------+------|   |------+------+------+------+------+------+------|
    | META | LCtrl| LGUI | PScr | INS  | LALT |Space |   |Space |  -=  |  ^~  |RCtrl | LEFT | DOWN | RIGHT|
    `------------------------------------------------'   `------------------------------------------------'
    */
   [SYMB] = LAYOUT( \
-    _______, KC_EXLM, S(KC_2), KC_HASH, KC_DLR,  KC_PERC, KC_RBRC,    KC_BSLS,    JP_AMPR, JP_CIRC, XXXXXXX, KC_RO,      S(KC_JYEN), _______, \
-    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, JP_LPRN,    JP_RPRN,    XXXXXXX, XXXXXXX, XXXXXXX, S(KC_SCLN), S(KC_QUOT), _______, \
-    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, S(KC_RBRC), S(KC_BSLS), XXXXXXX, XXXXXXX, XXXXXXX, JP_UNDS,    _______,    _______, \
-    _______, _______, _______, _______, _______, _______, _______,    _______,    _______, _______, _______, _______,    _______,    _______  \
+    _______, KC_EXLM, S(KC_2), KC_HASH, KC_DLR,  KC_PERC, KC_RBRC, KC_BSLS, JP_AMPR,    JP_CIRC,    XXXXXXX, KC_RO,      S(KC_JYEN), _______, \
+    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, JP_LPRN,    JP_RPRN,    XXXXXXX, S(KC_SCLN), S(KC_QUOT), _______, \
+    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, S(KC_RBRC), S(KC_BSLS), XXXXXXX, JP_UNDS,    _______,    _______, \
+    _______, _______, _______, _______, _______, _______, _______, _______, _______,    _______,    _______, _______,    _______,    _______  \
   )
 
 };
