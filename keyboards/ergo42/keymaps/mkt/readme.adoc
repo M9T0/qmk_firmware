@@ -1,0 +1,20 @@
+= hdbx
+
+Designed for Japanese Keyboardists using JIS on the Ergo42.
+
+== Layer
+
+.BASE
+----
+include::keymap.c[lines=16..26]
+----
+
+.META
+----
+include::keymap.c[lines=35..45]
+----
+
+.SYMB
+----
+include::keymap.c[lines=53..63]
+----
