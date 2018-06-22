@@ -1,0 +1,18 @@
+= eucaly
+
+== Layer
+
+.BASE
+----
+include::keymap.c[lines=16..26]
+----
+
+.META
+----
+include::keymap.c[lines=35..45]
+----
+
+.SYMB
+----
+include::keymap.c[lines=53..63]
+----
