@@ -62,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    `------------------------------------------------'   `------------------------------------------------'
    */
   [SYMB] = LAYOUT( \
-    _______, KC_EXLM, S(KC_2), KC_HASH, KC_DLR,  KC_PERC, KC_RBRC, KC_BSLS, JP_AMPR,    JP_CIRC,    XXXXXXX, KC_RO,      S(KC_JYEN), _______, \
+    _______, KC_EXLM, S(KC_2), KC_HASH, KC_DLR,  KC_PERC, KC_RBRC, KC_BSLS, JP_AMPR,    S(KC_7),    XXXXXXX, KC_RO,      S(KC_JYEN), _______, \
     _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, JP_LPRN,    JP_RPRN,    XXXXXXX, S(KC_SCLN), S(KC_QUOT), _______, \
     _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, S(KC_RBRC), S(KC_BSLS), XXXXXXX, JP_UNDS,    _______,    _______, \
     _______, _______, _______, _______, _______, _______, _______, _______, _______,    _______,    _______, _______,    _______,    _______  \
