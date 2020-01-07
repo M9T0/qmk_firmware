@@ -34,20 +34,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   /* META
    ,------------------------------------------------.   ,------------------------------------------------.
-   | Reset|      |   1  |   2  |   3  |   4  |  5   |   |  6   |   7  |   8  |   9  |   0  | PGUP | Bksp |
+   | ESC  |      |   1  |   2  |   3  |   4  |  5   |   |  6   |   7  |   8  |   9  |   0  | PGUP | Bksp |
    |------+------+------+------+------+------+------|   |------+------+------+------+------+------+------|
-   | Tab  |      |      |Muhen | Henk |      |      |   | Left | Down |  Up  |Right |      | PGDN | Enter|
+   | Tab  |      |      |  F1  |  F2  |  F3  |  F4  |   | Left | Down |  Up  |Right |      | PGDN | Enter|
+   |------+------+------|------+------+------+------+   |------+------+------+------+------+------+------|
+   | SYMB | LSft |      |  F5  |  F6  |  F7  |  F8  |   |  F9  |  F10 |  F11 | F12  |      | RSft | SYMB |
    |------+------+------+------+------+------+------|   |------+------+------+------+------+------+------|
-   | SYMB |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |   |  F7  |  F8  |  F9  | F10  | F11  | F12  | SYMB |
-   |------+------+------+------+------+------+------|   |------+------+------+------+------+------+------|
-   | META | LCtrl| LGUI | PScr | INS  | LALT |Space |   |Space |  -=  |  ^~  | HOME | End  | RCtl | META |
+   | META | LCtrl| LGUI | PScr | INS  | LALT |Muhen |   | Henk |  -=  |  ^~  | HOME | End  | RCtl | META |
    `------------------------------------------------'   `------------------------------------------------'
    */
   [META] = LAYOUT( \
-    RESET,   XXXXXXX, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,     KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_PGUP, _______, \
-    _______, XXXXXXX, XXXXXXX, KC_MHEN, KC_HENK, XXXXXXX, XXXXXXX,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX, KC_PGDN, _______, \
-    _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,    KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, \
-    _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______, _______, _______, _______  \
+    _______, XXXXXXX, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,     KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_PGUP, _______, \
+    _______, XXXXXXX, XXXXXXX, KC_F1,   KC_F2,   KC_F3,   KC_F4,    KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX, KC_PGDN, _______, \
+    _______, _______, XXXXXXX, KC_F5,   KC_F6,   KC_F7,   KC_F8,    KC_F9,   KC_F10,  KC_F11,  KC_F12,  XXXXXXX, _______, _______, \
+    _______, _______, _______, _______, _______, _______, KC_MHEN,  KC_HENK, _______, _______, _______, _______, _______, _______  \
   ),
 
   /* SYMB
@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    |------+------+------+------+------+------+------|   |------+------+------+------+------+------+------|
    | Tab  |      |      |      |      |      |      |   |  [   |  {   |      |      |  +   |  *   | Enter|
    |------+------+------+------+------+------+------|   |------+------+------+------+------+------+------|
-   | SYMB |      |      |      |      |      |      |   |  ]   |  }   |      |      |  _   | RSft | SYMB |
+   | SYMB | LSft |      |      |      |      |      |   |  ]   |  }   |      |      |  _   | RSft | SYMB |
    |------+------+------+------+------+------+------|   |------+------+------+------+------+------+------|
    | META | LCtrl| LGUI | PScr | INS  | LALT |Space |   |Space |  -=  |  ^~  | HOME | End  | RCtl | META |
    `------------------------------------------------'   `------------------------------------------------'
@@ -64,7 +64,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [SYMB] = LAYOUT( \
     _______, XXXXXXX, KC_EXLM, S(KC_2), KC_HASH, KC_DLR,  KC_PERC,  JP_AMPR, S(KC_7),    JP_LPRN, JP_RPRN, KC_RO,      S(KC_JYEN), _______, \
     _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  KC_RBRC, S(KC_RBRC), XXXXXXX, XXXXXXX, S(KC_SCLN), S(KC_QUOT), _______, \
-    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  KC_BSLS, S(KC_BSLS), XXXXXXX, XXXXXXX, JP_UNDS,    _______,    _______, \
+    _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  KC_BSLS, S(KC_BSLS), XXXXXXX, XXXXXXX, JP_UNDS,    _______,    _______, \
     _______, _______, _______, _______, _______, _______, _______,  _______, _______,    _______, _______, _______,    _______,    _______  \
   )
 
