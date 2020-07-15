@@ -1,7 +1,6 @@
 #include QMK_KEYBOARD_H
 #include "keymap_jp.h"
 
-extern keymap_config_t keymap_config;
 
 #define BASE 0
 #define META 1
