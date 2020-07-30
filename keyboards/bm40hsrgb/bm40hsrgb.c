@@ -1,4 +1,4 @@
-/* Copyright 2019 Spaceman
+/* Copyright 2020 tominabox1
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -13,29 +13,4 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#pragma once
-#include "config_common.h"
-
-/* USB Device descriptor parameter */
-#define VENDOR_ID       0x5342 // "SB"
-#define PRODUCT_ID      0x3225 // "2%"
-#define DEVICE_VER      0x0001
-#define MANUFACTURER    Spaceman
-#define PRODUCT         2% Milk
-#define DESCRIPTION     A milk themed 2% Keyboard
-
-/* key matrix size */
-#define MATRIX_ROWS 2
-#define MATRIX_COLS 1
-
-/* Milk default pinout */
-#define DIRECT_PINS { \
-    {D4}, \
-    {C6}  \
-}
-#define UNUSED_PINS
-
-#ifdef RGBLIGHT_ENABLE
-#define RGB_DI_PIN B6
-#define RGBLED_NUM 1
-#endif
+#include "bm40hsrgb.h"
